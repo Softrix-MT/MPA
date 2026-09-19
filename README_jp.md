@@ -46,7 +46,7 @@
 ### プロパティ
 #### `hResult`
 - MPAInteger内部でthrow発生時のエラーコード
-## MPAtrial class
+## MPAInteger class
 ### 主要メソッド
 #### コンストラクタ
 ##### `MPAInteger(void)`
@@ -120,15 +120,15 @@
 ##### `HRESULT Mul(INT_PTR val)`
 - 符合付き乗算
 - ans.Mul(val) => ans *= val
-##### 'HRESULT MulU(UINT_PTR val)'
+##### `HRESULT MulU(UINT_PTR val)`
 - 絶対値乗算
 - ans.Mul(val) => ans *= val(ansは符号変化しない)
 
 #### 除算
-##### `HRESULT DivS(MPAInteger& num, INT_PTR den)`
+##### `HRESULT Div(MPAInteger& num, INT_PTR den)`
 - 符合付き除算
 - ans.Div(num,den) => ans = num / den
-##### 'HRESULT Div(MPAInteger& num, MPAInteger& den, bool denormalize)`
+##### `HRESULT Div(MPAInteger& num, MPAInteger& den, bool denormalize)`
 - 符合付き除算
 - ans.Div(num,den) => ans = num / den & num = num % den
 - denormalize：処理後のden値を非正規化(元の数値に戻す)の実行(true:非正規化 false:正規化)
@@ -138,7 +138,7 @@
 - ans.Div(num,den,rem) => ans = num / den & rem = num % den
 ##### `HRESULT DivU(MPAInteger& num, UINT_PTR den)`
 - 絶対値減算
-- ans.Div(num,den) => ans = num / den
+- ans.Div(num,den) => ans = num / den & num = num % den
 ##### `HRESULT DivU(MPAInteger& num, MPAInteger& den, bool denormalize)`
 - 絶対値除算
 - ans.Div(num,den) => ans = num / den & num = num % den
@@ -183,7 +183,7 @@
 - high：領域を受け取るオブジェクト
 - limb：this領域からlimbサイズhighにコピー
 - allocation：true=領域確保とデータコピー　false=メモリーアドレスコピー
-#### `Swap(MPAInteger& val1, MPAInteger& val2)`
+#### `void Swap(MPAInteger& val1, MPAInteger& val2)`
 - val1とval2のデータ(数値メモリーアドレスと符号)を入れ替える
 #### `HRESULT SplitU(MPAInteger& high, MPAInteger& low, size_t limb, bool allocation)`
 - 絶対値分割(正/負)フラグはコピーされない(high,lowは常に正の値)

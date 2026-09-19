@@ -46,7 +46,7 @@
 ### Properties
 #### `hResult`
 - Error code when an exception is thrown inside MPAInteger
-## MPAtrial Class
+## MPAInteger Class
 ### Main Methods
 #### Constructors
 ##### `MPAInteger(void)`
@@ -120,15 +120,15 @@
 ##### `HRESULT Mul(INT_PTR val)`
 - Signed multiplication
 - ans.Mul(val) => ans *= val
-##### 'HRESULT MulU(UINT_PTR val)'
+##### `HRESULT MulU(UINT_PTR val)`
 - Absolute-value multiplication
 - ans.Mul(val) => ans *= val (the sign of ans does not change)
 
 #### Division
-##### `HRESULT DivS(MPAInteger& num, INT_PTR den)`
+##### `HRESULT Div(MPAInteger& num, INT_PTR den)`
 - Signed division
 - ans.Div(num,den) => ans = num / den
-##### 'HRESULT Div(MPAInteger& num, MPAInteger& den, bool denormalize)`
+##### `HRESULT Div(MPAInteger& num, MPAInteger& den, bool denormalize)`
 - Signed division
 - ans.Div(num,den) => ans = num / den & num = num % den
 - denormalize: Execute denormalization (restore the original value) of den after processing (true: denormalize, false: normalize)
@@ -138,7 +138,7 @@
 - ans.Div(num,den,rem) => ans = num / den & rem = num % den
 ##### `HRESULT DivU(MPAInteger& num, UINT_PTR den)`
 - Absolute-value subtraction
-- ans.Div(num,den) => ans = num / den
+- ans.Div(num,den) => ans = num / den & num = num % den
 ##### `HRESULT DivU(MPAInteger& num, MPAInteger& den, bool denormalize)`
 - Absolute-value division
 - ans.Div(num,den) => ans = num / den & num = num % den
@@ -183,7 +183,7 @@
 - high: Object that receives the area
 - limb: Number of limbs to copy from this object to high
 - allocation: true = allocate storage and copy data, false = copy the memory address
-#### `Swap(MPAInteger& val1, MPAInteger& val2)`
+#### `void Swap(MPAInteger& val1, MPAInteger& val2)`
 - Swaps the data (numeric memory address and sign) of val1 and val2
 #### `HRESULT SplitU(MPAInteger& high, MPAInteger& low, size_t limb, bool allocation)`
 - Splits the absolute value (the positive/negative sign flag is not copied; high and low are always positive)
