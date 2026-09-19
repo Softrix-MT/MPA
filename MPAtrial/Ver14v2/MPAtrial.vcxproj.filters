@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{3e0a5213-887c-491e-ab3e-94efd8f3b1d8}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;hpj;bat;for;f90</Extensions>
+    </Filter>
+    <Filter Include="Source Files\IA32 Sources">
+      <UniqueIdentifier>{9501dc5d-fa37-4762-9ef8-9ea469f2a0fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\IA64 Sources">
+      <UniqueIdentifier>{9a3001d8-d96e-4a80-abb7-110db611029e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{be0fefcc-88e8-4258-94bf-330c4ff3898b}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;fi;fd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Global Headers">
+      <UniqueIdentifier>{7bed47e1-a91c-4dbe-9aa3-a4510e155465}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Local Headers">
+      <UniqueIdentifier>{b568012a-64df-45eb-b3c4-751351d18f5b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\SOURCE\CharValue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOURCE\DivExact.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOURCE\GirderLimit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOURCE\Support.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Support\MPAtrial.h">
+      <Filter>Header Files\Global Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\INCLUDE\StdHead.h">
+      <Filter>Header Files\Local Headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\INCLUDE\MPA.inc">
+      <Filter>Header Files\Local Headers</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="..\SOURCE\IA32\MPAadd32.asm">
+      <Filter>Source Files\IA32 Sources</Filter>
+    </MASM>
+    <MASM Include="..\SOURCE\IA32\MPAdiv32.asm">
+      <Filter>Source Files\IA32 Sources</Filter>
+    </MASM>
+    <MASM Include="..\SOURCE\IA32\MPAmul32.asm">
+      <Filter>Source Files\IA32 Sources</Filter>
+    </MASM>
+    <MASM Include="..\SOURCE\IA32\MPAopr32.asm">
+      <Filter>Source Files\IA32 Sources</Filter>
+    </MASM>
+    <MASM Include="..\SOURCE\IA32\MPAshl32.asm">
+      <Filter>Source Files\IA32 Sources</Filter>
+    </MASM>
+    <MASM Include="..\SOURCE\IA32\MPAshr32.asm">
+      <Filter>Source Files\IA32 Sources</Filter>
+    </MASM>
+    <MASM Include="..\SOURCE\IA32\MPAsub32.asm">
+      <Filter>Source Files\IA32 Sources</Filter>
+    </MASM>
+    <MASM Include="..\SOURCE\IA64\MPAadd64.asm">
+      <Filter>Source Files\IA64 Sources</Filter>
+    </MASM>
+    <MASM Include="..\SOURCE\IA64\MPAdiv64.asm">
+      <Filter>Source Files\IA64 Sources</Filter>
+    </MASM>
+    <MASM Include="..\SOURCE\IA64\MPAmul64.asm">
+      <Filter>Source Files\IA64 Sources</Filter>
+    </MASM>
+    <MASM Include="..\SOURCE\IA64\MPAopr64.asm">
+      <Filter>Source Files\IA64 Sources</Filter>
+    </MASM>
+    <MASM Include="..\SOURCE\IA64\MPAshl64.asm">
+      <Filter>Source Files\IA64 Sources</Filter>
+    </MASM>
+    <MASM Include="..\SOURCE\IA64\MPAshr64.asm">
+      <Filter>Source Files\IA64 Sources</Filter>
+    </MASM>
+    <MASM Include="..\SOURCE\IA64\MPAsub64.asm">
+      <Filter>Source Files\IA64 Sources</Filter>
+    </MASM>
+  </ItemGroup>
+</Project>
